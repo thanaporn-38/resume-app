@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/Header'; // แก้ไขเส้นทางให้ถูกต้อง
+import AboutMe from './components/AboutMe';
+import AttendTraining from './components/AttendTraining';
+import Project from './components/Project';
+import Sidebar from './components/Sidebar';
+import References from './components/References';
+import './App.css'; // Import ไฟล์ CSS สำหรับการจัดสไตล์
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <div className="main-content">
+        <Header />
+        <AboutMe />
+        <AttendTraining />
+        <Project />
+        <References />
+      </div>
+      <Sidebar />
     </div>
   );
-}
+};
 
 export default App;
